@@ -1,7 +1,7 @@
 describe('hello', function () {
 
-    it('should return hello words for a given name', function () {
-        expect(hello('karma')).toBe('Hello, javascript!')
+    it('should use jquery to get text of some html code', function () {
+        expect(hello('<div>JQuery</div>')).toBe('JQuery')
     })
 
 })

@@ -1,3 +1,5 @@
-function hello(name) {
-    return 'Hello, ' + name + '!'
+const $ = window.$
+
+function hello(html) {
+    return $(html).text()
 }
