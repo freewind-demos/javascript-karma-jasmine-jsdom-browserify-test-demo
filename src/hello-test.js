@@ -1,7 +1,10 @@
+const JSDOM = require('jsdom').JSDOM;
+
 describe('hello', function () {
 
-    it('should use jquery to get text of some html code', function () {
-        expect(hello('<div>JQuery</div>')).toBe('JQuery')
-    })
+  it('should get body text', function () {
+    const document = new JSDOM('<!DOCTYPE html><html><body><div>Hello, JSDOM</div></body></html>').window.document;
+    expect(hello(document)).toEqual('Hello, JSDOM');
+  });
 
-})
+});

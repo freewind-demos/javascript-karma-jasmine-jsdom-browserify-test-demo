@@ -1,5 +1,3 @@
-const $ = window.$
-
-function hello(html) {
-    return $(html).text()
+function hello(document) {
+  return document.querySelector('div').textContent;
 }
